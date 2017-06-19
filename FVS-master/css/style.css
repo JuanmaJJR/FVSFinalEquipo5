@@ -1,0 +1,273 @@
+/*  COLORES
+        Rojo: #b42a33;
+        Gris: #ccc;
+        Negro: #333;
+*/
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+
+  font-size:27px;
+  background-color:#e4e4e0;
+
+}
+
+/*  NAVEGADOR  */
+nav {
+    display: flex;
+    width: 100%;
+    background-color: #333;
+}
+.topnav {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.topnav li {
+    display: flex;
+    width: 25%;
+    text-align: center;
+    flex-direction: column;
+}
+
+.topnav li a {
+    color: #f2f2f2;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 32px;
+}
+
+.topnav li a:hover {
+    background-color: #555;
+}
+
+ul.topnav li a:hover ~ .decor {
+    top: 0px;
+}
+
+.decor {
+    position:relative;
+    width: 100%;
+    height: 10px;
+    top: -364px;
+    background-color: #b42a33;
+}
+
+
+/*  BLOQUES  */
+
+#general,#energia,#transporte,#agua,#materiales {
+    display: none;
+    justify-content: space-around;
+    padding: 2% 0;
+    background-color: #ccc;
+    box-shadow: 0 0 5px #555;
+    margin-bottom: 2%;
+    font-size: 40px;
+}
+
+#g,#e,#t,#a,#m {
+    display:flex;
+    flex-direction: column;
+}
+#box-container{
+    display: flex;
+    flex-direction: column;
+}
+.preguntas,.dependiente{
+    border-radius: 7px;
+    box-shadow: 0 0 25px #555;
+    width:40%;
+    margin: 3% auto;
+    padding-bottom:40px;
+    background-color: #f2f2f2;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+p{
+    font-size:30px;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 1%;
+    padding-left: 8%;
+    padding-right: 8%;
+    color: #b42a33;
+    
+}
+.respuestas {
+    padding-right: 6%;
+    padding-left: 8%;
+}
+.dependiente {
+    box-shadow: 0 0 25px #b42a33; 
+}
+
+label {
+    font-size: 22px;
+    margin-left: 2%;
+}
+
+hr {
+    width:85%;
+    margin:0 auto;
+    margin-bottom: 40px;
+    background-color: #b42a33;
+    height: 3px;
+}
+#divBoton {
+    display: flex;
+    justify-content: center;
+}
+
+#botonFormulario {
+    height: 40px;
+    width: 80px;
+    margin: 4%;
+    margin-top: 1.5%;
+}
+
+.res{
+   text-align: center;
+    margin: 3% auto;
+    order: -1;
+    border: 2px solid green;
+    border-radius: 20px;
+    box-shadow: 0 0 25px green;
+    background-color: white;
+    padding: 10px;
+    /*position: fixed;
+    top:0;*/
+}
+.res2{
+   text-align: center;
+    margin: 3% auto;
+    order: -1;
+    border: 2px solid yellow;
+    border-radius: 20px;
+    box-shadow: 0 0 25px yellow;
+    background-color: white;
+    padding: 10px;
+    /*position: fixed;
+    top:0;*/
+}
+.res3{
+   text-align: center;
+    margin: 3% auto;
+    order: -1;
+    border: 2px solid #b42a33;
+    border-radius: 20px;
+    box-shadow: 0 0 25px #b42a33;
+    background-color: white;
+    padding: 10px;
+    /*position: fixed;
+    top:0;*/
+}
+img{
+     
+    height:160px;
+    width:160px;
+}
+
+
+@media screen and (max-width:1430px){
+    body {font-size: 23px;}
+
+     #general,#energia,#transporte,#agua,#materiales{font-size:36px;}
+
+    .topnav li a {font-size: 28px;}
+
+    .topnav {width: 75%;}
+
+    p{font-size: 26px;}
+
+    label{font-size: 18px;}
+
+    .preguntas,.dependiente{width:50%;}
+}
+
+@media screen and (max-width:1051px){
+    body {font-size: 19px;}
+
+     #general,#energia,#transporte,#agua,#materiales{font-size:32px;}
+
+    .topnav {width: 100%;}
+
+    .topnav li a {
+        font-size: 25px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    
+    p{font-size: 22px;}
+
+    label{font-size: 15px;}
+
+    .preguntas,.dependiente{width:60%;}
+    /*.res{
+        width: 100%;
+        position: absolute;
+        top:0;
+    }*/
+}
+
+@media screen and (max-width:733px){
+    body {font-size: 12px;}
+
+    #general,#energia,#transporte,#agua,#materiales{font-size:26px;}
+
+    .topnav li a {
+        font-size: 18px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    
+    .decor {height: 8px;}
+
+    p{font-size: 18px;}
+
+    label{font-size: 13px;}
+
+    hr {margin-bottom: 20px;}
+
+    .preguntas,.dependiente{width:80%;}
+    /*.res{
+        width: 100%;
+       
+    }*/
+}
+
+@media screen and (max-width:520px){
+    #general,#energia,#transporte,#agua,#materiales{font-size:22px;}
+    
+    .topnav{flex-direction: column;}
+
+    .topnav li {
+        width: 100%;
+        text-align: left;
+    }
+    .topnav li a {
+        font-size: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 40px;
+    }
+
+    .decor {height: 5px;}
+
+    p{font-size: 17px;}
+
+    label{font-size: 12px;}
+
+    hr {margin-bottom: 18px;}
+}
+
